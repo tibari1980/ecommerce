@@ -37,8 +37,8 @@ public class EcommerceApplication implements CommandLineRunner {
 			double hightPrice=1100;
 			for(int a=0;a<20;a++) {
 				Random rp=new Random();
-				double resultPrice=rp.nextDouble()+hightPrice;
-			   productRepository.save(new Product("name"+i, "description"+i, resultPrice , r.nextBoolean(), r.nextBoolean(), r.nextBoolean(), "photName"+a, cat));
+				double resultPrice=rp.nextDouble(hightPrice-lowPrice)+lowPrice;
+			   productRepository.save(new Product("name"+i, "description"+i,  , r.nextBoolean(), r.nextBoolean(), r.nextBoolean(), "photName"+a, cat))
 		   }
 		}
 		
