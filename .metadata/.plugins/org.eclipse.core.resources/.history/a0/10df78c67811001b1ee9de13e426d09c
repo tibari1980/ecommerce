@@ -1,0 +1,38 @@
+package com.example.ecommerce.entities;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+@Entity
+@Table(name="PRODUCTS")
+public class Product  implements Serializable{
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="CODE")
+	private Long code;
+	@Column(name="NAME")
+	private String name;
+	@Column(name="DESCRIPTION")
+	private String description;
+	@Column(name="CURRENT_PRICE")
+	private double currentPrice;
+	@Column(name="PROMOTION")
+	private boolean isPromition;
+	@Column(name="SELECTED")
+	private boolean isSelected;
+	@Column(name="AVAILABLE")
+	private boolean isAvailable;
+	@Column(name="PHOTO_NAME")
+	private String photoName;
+	@ManyToOne
+	@JoinColumn(name = "CODE")
+	private  Category category; 
+
+	
+}
