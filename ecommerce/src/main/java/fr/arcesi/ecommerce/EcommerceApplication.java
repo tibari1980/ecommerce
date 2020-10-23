@@ -32,16 +32,16 @@ public class EcommerceApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		repositoryRestConfiguration.exposeIdsFor(Product.class);
 		repositoryRestConfiguration.exposeIdsFor(Category.class);
-		List<Category> lstCategories=Arrays.asList(new Category("Créme visage","créme visage ",null),
-				                                   new Category("Anti-âge", "anti-age", null),
-				                                    new Category("Serum et huile", "Serum et huile",null),
+		List<Category> lstCategories=Arrays.asList(new Category("Créme visage","créme visage ","unknown.jpg"),
+				                                   new Category("Anti-âge", "anti-age","unknown.jpg"),
+				                                    new Category("Serum et huile", "Serum et huile","unknown.jpg"),
 				                                    new Category("Soin yeux","soin yeux",null),
-				                                    new Category("Nettoyant et démaquillant","nettoyant et démaquillant",null),
-				                                    new Category("Masque","masque",null),
-				                                    new Category("Hydratation","hydratation",null),
-				                                    new Category("Purifiant","purifiant",null),
-				                                    new Category("Créme main","créme main",null),
-	    	                                    new Category("Savons","savons description",null));
+				                                    new Category("Nettoyant et démaquillant","nettoyant et démaquillant","unknown.jpg"),
+				                                    new Category("Masque","masque","unknown.jpg"),
+				                                    new Category("Hydratation","hydratation","unknown.jpg"),
+				                                    new Category("Purifiant","purifiant","unknown.jpg"),
+				                                    new Category("Créme main","créme main","unknown.jpg"),
+	    	                                    new Category("Savons","savons description","unknown.jpg"));
 		lstCategories.stream().forEach(cat->{
 			Random r=new Random();
 			int lowCat=1;
