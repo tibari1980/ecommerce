@@ -23,7 +23,7 @@ public class Product  implements Serializable{
 	@Column(name="CURRENT_PRICE")
 	private double currentPrice;
 	@Column(name="PROMOTION")
-	private boolean isPromition;
+	private boolean isPromotion;
 	@Column(name="SELECTED")
 	private boolean isSelected;
 	@Column(name="AVAILABLE")
@@ -42,7 +42,7 @@ public class Product  implements Serializable{
 		this.name = name;
 		this.description = description;
 		this.currentPrice = currentPrice;
-		this.isPromition = isPromition;
+		this.isPromotion = isPromition;
 		this.isSelected = isSelected;
 		this.isAvailable = isAvailable;
 		this.photoName = photoName;
@@ -72,11 +72,11 @@ public class Product  implements Serializable{
 	public void setCurrentPrice(double currentPrice) {
 		this.currentPrice = currentPrice;
 	}
-	public boolean isPromition() {
-		return isPromition;
+	public boolean isPromotion() {
+		return isPromotion;
 	}
-	public void setPromition(boolean isPromition) {
-		this.isPromition = isPromition;
+	public void setPromotion(boolean isPromition) {
+		this.isPromotion = isPromition;
 	}
 	public boolean isSelected() {
 		return isSelected;
@@ -105,7 +105,7 @@ public class Product  implements Serializable{
 	@Override
 	public String toString() {
 		return "Product [code=" + code + ", name=" + name + ", description=" + description + ", currentPrice="
-				+ currentPrice + ", isPromition=" + isPromition + ", isSelected=" + isSelected + ", isAvailable="
+				+ currentPrice + ", isPromition=" + isPromotion + ", isSelected=" + isSelected + ", isAvailable="
 				+ isAvailable + ", photoName=" + photoName + "]";
 	} 
 

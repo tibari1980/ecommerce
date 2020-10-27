@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name="CATEGORIES")
 public class Category implements Serializable {
@@ -22,8 +24,10 @@ public class Category implements Serializable {
 	private String name;
 	@Column(name="DESCRIPTION")
 	private String description;
+	
 	@Column(name="PHOTO_NAME")
 	private String photoName;
+	@JsonIgnore
 	@OneToMany(mappedBy = "category")
 	private Collection<Product> products;
 	public Category() {
