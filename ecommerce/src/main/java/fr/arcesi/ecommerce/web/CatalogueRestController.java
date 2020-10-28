@@ -21,7 +21,7 @@ import fr.arcesi.ecommerce.dao.CategoryRepository;
 import fr.arcesi.ecommerce.dao.ProductRepository;
 import fr.arcesi.ecommerce.entities.Category;
 import fr.arcesi.ecommerce.entities.Product;
-import sun.java2d.opengl.WGLSurfaceData.WGLVSyncOffScreenSurfaceData;
+
 
 @RestController
 //@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
